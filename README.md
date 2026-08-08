@@ -111,7 +111,7 @@ $$I_{sh}=U_{rh}\sqrt{\left|\frac{Y_{rs}}{\chi}\right|^2+\left|\frac{Y_{rsdq}}{\c
 一次正向仿真输出谐波，一次反向链式求导直接得到损失对4个气动参数完整梯度，无数值误差。
 梯度链式分解路径：
 $$\nabla_{\mathbf{p}}\mathcal{\(\mathcal{L}\)} = \frac{\partial \mathcal{\(\mathcal{L}\)}}{\partial \mathbf{y}} \cdot \frac{\partial \mathbf{y}}{\partial \omega_g} \cdot \frac{\partial \omega_g}{\partial T_m} \cdot \frac{\partial T_m}{\partial \mathbf{p}}$$
-![梯度反向传播链路](fig4_grad_cascade.png)
+![梯度反向传播链路](fig3_ad_schematic.png)
 图3 三级模型梯度反向传播示意图
 
 ## 4.2 中心有限差分
@@ -166,12 +166,12 @@ AD需要对双质量块ODE执行反向微分，计算负载远大于FD的多次�
 
 # 7 综合讨论、工程拓展与研究展望
 ## 7.1 PINN实时代理模型拓展
-![PINN网络架构](fig5_pinn_net.png)
+![PINN网络架构](fig4_pinn_architecture.png)
 图5 物理信息神经网络代理模型
 预先训练PINN替代完整ODE正向模型，推理速度毫秒级，适用于现场在线谐波溯源。
 
 ## 7.2 工程闭环控制应用框架
-![溯源-主动抑制闭环](fig6_control_loop.png)
+![溯源-主动抑制闭环](fig6_suppression_loop.png)
 图6 谐波监测-参数溯源-气动抑制闭环框架
 区别传统末端滤波被动治理，可从风机气动源头减小谐波激励。
 
