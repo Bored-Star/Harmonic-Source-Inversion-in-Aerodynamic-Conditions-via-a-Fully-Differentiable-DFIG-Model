@@ -96,7 +96,7 @@ J_g \dot{\omega}_g = K_{sh}\theta_{sh} + D_{sh}(\omega_r-\omega_g) - D_g \omega_
 $$
 采用diffrax Tsit5自适应求解器，积分区间$t\in[0,10]\mathrm{s}$，仅取稳态终点$\omega_g$传入电气层，全程支持JAX反向自动微分。
 
-![气动机械电气三级传导图](fig1_airmech_chain.png)
+![气动机械电气三级传导图](fig1_physical_chain.png)
 图2 多物理场级联传导示意图
 
 ## 3.3 电气层DFIG间谐波解析模型
